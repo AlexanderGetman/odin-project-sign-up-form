@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 1440px;    
+    height: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+.main {
+    background-color: white;
+    display: flex;
+    margin: auto;
+}
+
+.left-part {
+    width: 30%;
+    background-color: green;
+}
+
+.right-part {
+    width: 70%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;    
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 200px 25px 25px;
+}
+
+.right-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 10px 200px 15px 25px;
+    box-shadow: 0 15px 20px -17px gray;
+}
+
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form {
+    width: 50%;
+}
+
+input, label {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding: 25px 0 150px 25px;
+}

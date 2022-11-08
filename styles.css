@@ -1,10 +1,14 @@
+@font-face {
+    font-family: "Norse";
+    src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf');
+}
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    width: 1440px;    
-    height: 100%;
+    min-width: 890px;
     margin: auto;
     padding: 0;
 }
@@ -13,18 +17,21 @@ html, body {
     background-color: white;
     display: flex;
     margin: auto;
+    min-height: 100vh;
 }
 
 .left-part {
     width: 30%;
-    background-color: green;
+    background: url(./images/background.jpg) no-repeat center bottom;
+    background-size: cover;
+    position: relative;
 }
 
 .right-part {
     width: 70%;
     background-color: lightgray;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .information {
@@ -57,5 +64,37 @@ input, label {
 }
 
 .footer {
-    padding: 25px 0 150px 25px;
+    padding: 25px 0 115px 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    height: 15%;
+    background: rgba(5, 5, 5, .6);
+    color: white;
+    text-align: center;
+    font-family: Norse, serif;
+    font-size: 12vh;
+}
+
+.logo > img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.photo-credits {
+    position: absolute;
+    bottom: 0;
+    padding: 0 auto;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.photo-credits > p > a {
+    color: white;
 }

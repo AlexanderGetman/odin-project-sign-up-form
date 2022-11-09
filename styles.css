@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
 @font-face {
     font-family: "Norse";
     src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf');
@@ -5,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+    --font-default: 400 calc(1.8vh + 0.5vw) 'Roboto', serif;
 }
 
 html, body {
@@ -17,7 +20,7 @@ html, body {
     background-color: white;
     display: flex;
     margin: auto;
-    min-height: 100vh;
+    min-height: 100vh;    
 }
 
 .left-part {
@@ -29,7 +32,7 @@ html, body {
 
 .right-part {
     width: 70%;
-    background-color: lightgray;
+    background-color: rgb(250, 243, 243);
     display: flex;
     flex-direction: column;
 }
@@ -38,6 +41,11 @@ html, body {
     display: flex;
     flex-direction: column;
     padding: 100px 200px 25px 25px;
+    font: var(--font-default);
+}
+
+.information > p > span {
+    font-style: italic;
 }
 
 .right-main {
@@ -49,6 +57,10 @@ html, body {
     box-shadow: 0 15px 20px -17px gray;
 }
 
+.right-main > p {
+    font: var(--font-default);
+}
+
 .forms {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +68,7 @@ html, body {
 
 .form {
     width: 50%;
+    padding-bottom: 15px;
 }
 
 input, label {
@@ -63,8 +76,29 @@ input, label {
     flex-direction: column;
 }
 
+label {
+    font: 600 1.2vh 'Roboto', serif;
+    letter-spacing: 2px;
+}
+
+input {
+    width: max(150px, 22vw);
+    height: 30px;
+    border: solid 1px rgb(223, 233, 241);
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: rgb(159, 163, 167);    
+    box-shadow: 0 2px 5px rgb(90, 182, 212);
+}
+
 .footer {
     padding: 25px 0 115px 25px;
+}
+
+.footer > p {
+    font: 2vh 'Roboto', serif;
 }
 
 .logo {
@@ -93,8 +127,41 @@ input, label {
     color: white;
     width: 100%;
     text-align: center;
+    font: 1.5vh 'Roboto', serif;
 }
 
 .photo-credits > p > a {
+    color: white;    
+}
+
+.footer > button {
+    background-color: #27301f;
+    padding: 15px 8vh;
+    border: none;
+    border-radius: 5px;
     color: white;
+    font: 400 calc(1.2vh + 0.5vw) 'Roboto', serif;
+}
+
+.footer > button:hover {
+    cursor: pointer;
+    background-color: #3b492f;
+}
+
+.footer > button:active {
+    box-shadow: inset 5px 5px #586b46;
+}
+
+.footer > p > a {
+    color: #27301f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer > p > a:hover {
+    color: #586b46;
+}
+
+#password-check {
+    color: red;
 }

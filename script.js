@@ -2,9 +2,6 @@ let passwordForm = document.getElementById('password');
 let confirmationForm = document.getElementById('confirm-password');
 let passwordForms = [passwordForm, confirmationForm]
 let comparison = document.getElementById('password-check');
-let photoCredits = document.querySelector('.photo-credits');
-
-let mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())); 
 
 passwordForms.forEach((el) =>
     el.addEventListener('input', () => {
@@ -22,7 +19,3 @@ passwordForms.forEach((el) =>
             comparison.style.color = "blue";
         }
 }));
-
-if (mobile) {
-    photoCredits.style.display = "none";
-}

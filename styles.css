@@ -20,7 +20,7 @@ html, body {
     background-color: white;
     display: flex;
     margin: auto;
-    min-height: 100vh;    
+    min-height: 100vh;
 }
 
 .left-part {
@@ -164,4 +164,65 @@ input:focus {
 
 #password-check {
     color: red;
+}
+
+@media screen and (max-width: 950px) {
+    html, body {
+        min-width: 200px;
+    }
+
+    .main {
+        min-height: 100%;
+        flex-direction: column;
+    }
+
+    .left-part {
+        width: 100%;
+        background: none;
+        background-color: #27301f;
+        height: 100%;
+    }
+
+    .logo {
+        background: none;
+        margin-top: 0;
+        font-size: 8vh;
+    }
+
+    .logo > img {
+        width: 25%;
+    }
+
+    .right-part {
+        width: 100%;
+    }
+
+    .information {
+        padding: 20px 30px 25px 25px;
+    }
+
+    .right-main {
+        padding: 20px 30px 25px 25px;
+    }
+
+    .forms {
+        display: unset;
+    }
+
+    #password-check {
+        padding-top: 5px;
+    }
+
+    input {
+        width: 80vw;
+    }
+
+    .footer {
+        padding: 35px 0 25px;
+        text-align: center;
+    }
+
+    .footer > button {
+        font: 2vh 'Roboto', serif;
+    }
 }
